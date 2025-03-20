@@ -27,7 +27,6 @@
             width: 100vw;
             height: 100vh;
             background: url('overlay-image.jpg') no-repeat center center/cover;
-            opacity: 0.5;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -36,9 +35,12 @@
             transition: opacity 0.5s ease;
         }
         .overlay h1 {
-            font-size: 1.5rem;
+            font-size: 11rem;
             font-weight: bold;
             animation: pulse 1.5s infinite;
+            font-family: 'Snell Roundhand', cursive;
+            word-break: break-word;
+            max-width: 90%;
             color: white;
         }
         @keyframes pulse {
@@ -106,9 +108,19 @@
                 width: 80%;
                 text-align: center;
             }
+            .overlay h1 {
+                font-size: 4rem;
+                word-break: break-word;
+            }
         }
     </style>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const messages = ["you fucking suck", "i hate your guts"];
+            const overlayText = document.getElementById("overlay-text");
+            overlayText.textContent = messages[Math.floor(Math.random() * messages.length)];
+        });
+
         function revealPage() {
             document.querySelector('.overlay').style.opacity = '0';
             setTimeout(() => {
@@ -120,14 +132,14 @@
 </head>
 <body>
     <div class="overlay" onclick="revealPage()">
-        <h1><em>you fucking suck</em></h1>
+        <h1 id="overlay-text"></h1>
         <div class="pointer"></div>
     </div>
     
     <div class="hidden-content">
         <img src="promo-image.jpg" alt="Promo Image">
         <div class="buttons">
-            <a href="https://drive.google.com/file/d/1m7az2JfDw2_cHfivhJrPnj7b4FjLbrpJ/view?usp=sharing" download>download press kit</a>
+            <a href="https://drive.google.com/drive/folders/135ri9Tb0RIBavb4mhg3E9JA97Y1la6eS?usp=sharing" download>download press kit</a>
             <a href="https://drive.google.com/file/d/1kOjDsyNRBSPY3CSM5lPqacHmSgZUWE-p/view?usp=drive_link" target="_blank">listen to the song</a>
         </div>
     </div>
