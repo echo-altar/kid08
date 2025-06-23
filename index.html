@@ -16,7 +16,7 @@
             text-align: center;
             font-family: 'Montserrat', sans-serif;
             position: relative;
-            background-color: white;
+            background-color: #f8f6f3;
             margin: 0;
             overflow: hidden;
         }
@@ -26,7 +26,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: url('kid08-23mars2025-julia.persson_95.jpg') no-repeat center center/cover;
+            background: url('R3-00250-0029.JPG') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -35,19 +35,25 @@
             transition: opacity 0.5s ease;
         }
         .overlay h1 {
-            font-size: 11rem;
+            font-size: 4rem;
             font-weight: bold;
-            animation: pulse 1.5s infinite;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Added text shadow */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             font-family: 'Snell Roundhand', cursive;
             word-break: break-word;
             max-width: 90%;
-            color: white;
+            color: #f8f6f3;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: blink-cursor 1s steps(1) infinite;
+            padding-left: 0.4em;
+            padding-bottom: 0.4em;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-            100% { transform: scale(1); opacity: 1; }
+        @keyframes blink-cursor {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: #fff; }
+        }
+        .overlay h1 {
+            animation: blink-cursor 1s steps(1) infinite;
         }
         .pointer {
             font-size: 3rem;
@@ -110,16 +116,26 @@
                 text-align: center;
             }
             .overlay h1 {
-                font-size: 4rem;
+                font-size: 2rem;
                 word-break: break-word;
             }
         }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const messages = ["you fucking suck", "i hate your guts"];
+            const messages = ["  years spent waiting "];
             const overlayText = document.getElementById("overlay-text");
-            overlayText.textContent = messages[Math.floor(Math.random() * messages.length)];
+            const message = messages[Math.floor(Math.random() * messages.length)];
+            let i = 1; // Start at 1 so first letter is shown immediately
+
+            function typeWriter() {
+                overlayText.textContent = message.substring(0, i);
+                if (i < message.length) {
+                    i++;
+                    setTimeout(typeWriter, 80);
+                }
+            }
+            typeWriter();
         });
 
         function revealPage() {
@@ -138,10 +154,10 @@
     </div>
     
     <div class="hidden-content">
-        <img src="promo-image.jpg" alt="Promo Image">
+        <img src="ysw.jpg" alt="single artwork">
         <div class="buttons">
-            <a href="https://drive.google.com/drive/folders/135ri9Tb0RIBavb4mhg3E9JA97Y1la6eS?usp=sharing" download>download press kit</a>
-            <a href="https://soundcloud.com/kid08band/i-am-on-to-you-babe-release-244/s-L06JxbqVGGz?si=03f0c8d7699e449c979252de301b58a6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">listen to the song</a>
+            <!-- <a href="https://drive.google.com/drive/folders/135ri9Tb0RIBavb4mhg3E9JA97Y1la6eS?usp=sharing" download>download press kit</a> -->
+            <a href="https://soundcloud.com/kid08band/years-spent-waiting-unreleased/s-fa6VvP15a8o?in=kid08band/sets/love-actually-preview/s-NMHg55NDLCM&si=3ff92aea4d0d44d98210a9bb17c9836d&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">listen to the song</a>
         </div>
     </div>
 </body>
