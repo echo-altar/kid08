@@ -125,17 +125,33 @@
         document.addEventListener("DOMContentLoaded", function () {
             const messages = ["years spent waiting "];
             const overlayText = document.getElementById("overlay-text");
+            const overlay = document.querySelector('.overlay');
             const message = messages[Math.floor(Math.random() * messages.length)];
             let i = 1; // Start at 1 so first letter is shown immediately
+            let typed = false;
+            let autoAdvanceTimeout;
 
             function typeWriter() {
                 overlayText.textContent = message.substring(0, i);
                 if (i < message.length) {
                     i++;
-                    setTimeout(typeWriter, 80);
+                    setTimeout(typeWriter, 130);
+                } else {
+                    typed = true;
+                    autoAdvanceTimeout = setTimeout(() => {
+                        revealPage();
+                    }, 1000);
                 }
             }
             typeWriter();
+
+            // If user clicks, clear auto-advance and go to next screen
+            overlay.addEventListener('click', function () {
+                if (typed) {
+                    clearTimeout(autoAdvanceTimeout);
+                    revealPage();
+                }
+            });
         });
 
         function revealPage() {
