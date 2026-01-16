@@ -55,6 +55,7 @@
             margin-bottom: 30px;
             box-shadow: 0 0 20px rgba(0,0,0,0.8);
             filter: contrast(110%) sepia(20%);
+            order: -1;
         }
 
         .buttons {
@@ -234,6 +235,7 @@
                 flex: 1.4;
                 min-width: 0;
                 display: block;
+                order: 0;
             }
 
             .player-wrapper {
@@ -285,9 +287,12 @@
 
 
         <div class="bio-section">
-            <p>Kid08 is an enigmatic force in the modern music scene, blending nostalgic synthwave textures with gritty, lo-fi beats to create a soundscape that feels both futuristic and deeply personal. Emerging from the underground circuit, their music explores themes of digital isolation, late-night introspection, and the fleeting nature of memory.</p>
-            <p>With a unique ability to capture the sound of a neon-lit city at 3 AM, Kid08 has quickly garnered a dedicated following of listeners who find solace in the melancholy yet hopeful rhythms. Their sonic identity is built on a foundation of vintage synthesizers, decayed tape loops, and atmospheric field recordings, creating a rich tapestry of sound that invites the listener to get lost in the details.</p>
-            <p>Their latest project pushes the boundaries even further, experimenting with generative audio and interactive visualizers to create a completely immersive experience. Drawing inspiration from early internet culture and analog hardware, Kid08 crafts tracks that are not just songs but sonic journeys. Whether performing in intimate, dimly lit venues or releasing cryptic EPs online, the focus remains the same: to connect with the listener on a raw, emotional level, proving that even in a digital age, the human heart still beats the loudest.</p>
+            <p>Love Actually is an album about love in all its fractures. About the bad exes, the good ones who got away, the ones you waited for too long, and the ones you should never have waited for at all. It is not interested in romance as fantasy, but in love as lived experience: fierce, humiliating, tender, repetitive, and unresolved. Throughout the record, devotion hardens into resentment, intimacy stalls, and clarity arrives only after damage has already been done.</p>
+            <p>At the center of Kid08 are two characters as much as two musicians. Blueface Adler is the controlled, almost regal vocalist, her blue-painted face fixed in a mixture of sadness and beauty, delivered with a confrontational calm. Opposite her stands Sideshow Vid, the eccentric, unpredictable genius: virtuosic, restless, and deliberately excessive. Together, they form a cabaret-punk villain duo, extravagant and exaggerated, equal parts masterminds and cartoon antagonists. There is intelligence and precision in their music, but also playfulness, drama, and a willingness to lean into theatrical excess. This duality runs through Love Actually: carefully constructed yet volatile, emotionally sharp yet knowingly performative.</p>
+            <p>Written between 2022 and 2025, the album draws on autobiographical material from Kosman’s love life, filtered through dreams and abstraction. The songs move between different failures and forms of longing. “I Am On to You, Babe” opens the album with blunt accusation and self-awareness, refusing softness or reconciliation. “Years Spent Waiting” captures the exhaustion of misaligned timing and emotional dependency, while “Letter” lingers in restraint, replaying intimacy internally while refusing outward action. In “Little (Nothing) in Return,” disappointment accumulates through repetition, as expectation repeatedly outweighs what is given back.</p>
+            <p>Elsewhere, the album allows itself contrast and contradiction. “Easy/Slow” drifts through vulnerability and desire, lingering in slowness and uncertainty, while “Lonely Glow” offers a brief, fragile reciprocity, warmth that remains conditional. At the album’s center, “Kärlek egentligen,” a spoken-word poem by Aya Kanbar delivered in Swedish, suspends the narrative entirely, stripping love down to concept and contradiction. “Stephanie” collides punk urgency with orchestral weight, holding grief and futility side by side, while the closing track “Enter” abandons pop structure altogether, opening the album outward rather than resolving it.</p>
+            <p>The title Love Actually is used knowingly. Where it usually promises reassurance, Kid08 uses it to expose love’s flaws, repetitions, and failures. This is not an album about happy endings, but about recognition: seeing love clearly, even when it disappoints. The record ends without resolution, offering not an answer, but an entry point.</p>
+            <p>Love Actually is released March 27, 2026.</p>
         </div>
     </div>
     
@@ -298,15 +303,15 @@
 
     <script>
         const tracks = [
-            { title: "01. I Am On to You, Babe", src: "media/Kid08 - Love Actually - 01 - I Am On to You, Babe.mp3" },
-            { title: "02. Little (Nothing) in Return", src: "media/Kid08 - Love Actually - 02 - Little (Nothing) in Return.mp3" },
-            { title: "03. Years Spent Waiting", src: "media/Kid08 - Love Actually - 03 - Years Spent Waiting.mp3" },
-            { title: "04. Easy, Slow", src: "media/Kid08 - Love Actually - 04 - Easy, Slow.mp3" },
-            { title: "05. Lonely Glow", src: "media/Kid08 - Love Actually - 05 - Lonely Glow.mp3" },
-            { title: "06. Stephanie", src: "media/Kid08 - Love Actually - 06 - Stephanie.mp3" },
-            { title: "07. Letter", src: "media/Kid08 - Love Actually - 07 - Letter.mp3" },
-            { title: "08. Karlek egentligen", src: "media/Kid08 - Love Actually - 08 - Karlek egentligen.mp3" },
-            { title: "09. Enter", src: "media/Kid08 - Love Actually - 09 - Enter.mp3" }
+            { title: "01. I Am On to You, Babe", src: "media/Kid08 - Love Actually - 01 - I Am On to You, Babe.ogg" },
+            { title: "02. Little (Nothing) in Return", src: "media/Kid08 - Love Actually - 02 - Little (Nothing) in Return.ogg" },
+            { title: "03. Years Spent Waiting", src: "media/Kid08 - Love Actually - 03 - Years Spent Waiting.ogg" },
+            { title: "04. Easy, Slow", src: "media/Kid08 - Love Actually - 04 - Easy, Slow.ogg" },
+            { title: "05. Lonely Glow", src: "media/Kid08 - Love Actually - 05 - Lonely Glow.ogg" },
+            { title: "06. Stephanie", src: "media/Kid08 - Love Actually - 06 - Stephanie.ogg" },
+            { title: "07. Letter", src: "media/Kid08 - Love Actually - 07 - Letter.ogg" },
+            { title: "08. Karlek egentligen", src: "media/Kid08 - Love Actually - 08 - Karlek egentligen.ogg" },
+            { title: "09. Enter", src: "media/Kid08 - Love Actually - 09 - Enter.ogg" }
         ];
 
         const trackList = document.getElementById('track-list');
